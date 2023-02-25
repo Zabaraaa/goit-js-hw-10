@@ -32,10 +32,11 @@ function onSearchCountry(e) {
       } else if (response.length >= 2 && response.length <= 10) {
         resetInput(countryList);
         createMarkupCountryList(response);
+        resetInput(countryInfo);
       } else if (response.length === 1) {
-        resetInput(countryList);
         resetInput(countryInfo);
         createMarkupCountryInfo(response);
+        resetInput(countryList);
       }
     })
     .catch(() => {
